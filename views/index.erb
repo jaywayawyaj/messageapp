@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 
 <html>
+<center>
 <body>
   <h1>MessageApp</h1>
-  <form action='/new-message' type='post'>
-    <input type='text' name='Message'>
+  <form action='/new-message' method='post'>
+    <textarea name="Message" cols="40" rows="5"></textarea><br>
     <input type='submit' value='Send'>
     </form>
+    <br>
+    <%=@message%>
 </body>
+</center>
 </html>
