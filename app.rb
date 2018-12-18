@@ -14,7 +14,7 @@ class MessageApp < Sinatra::Base
   end
 
   post '/new-message' do
-    session[:history] << [params[:message]]
+    session[:history] << { Time.new => params[:message] }
     redirect '/'
   end
 
