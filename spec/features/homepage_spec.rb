@@ -3,6 +3,5 @@ feature 'homepage' do
     visit('/')
     expect(page).to have_content "MessageApp"
     expect(page).to have_css('textarea[name="message"]')
-    expect(page).to have_button "Send"
   end
 end

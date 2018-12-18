@@ -15,3 +15,5 @@ gem "sinatra", "~> 2.0"
 gem "simplecov", "~> 0.16.1"
 
 gem "timecop", "~> 0.9.1"
+
+gem "pry", "~> 0.12.2"

@@ -21,6 +21,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'timecop'
+require_relative './features/web_helpers'
 
 Capybara.app = MessageApp
 

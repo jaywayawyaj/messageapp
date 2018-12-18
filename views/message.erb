@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <center>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<% @messages.each do |message| %>
+  <% if message.id == @id %>
+    <%= message.text %>
+  <% end %>
+<% end %>
+<div>
+  <input type="button" value="Back to homepage" onclick="history.back(-1)" />
+</body>
+</center>
+</html>
