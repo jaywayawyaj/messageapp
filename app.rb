@@ -1,21 +1,20 @@
 require 'sinatra/base'
-require_relative './lib/message'
+# require_relative './lib/message'
 
 class MessageApp < Sinatra::Base
   enable :sessions
 
+  before do
+    session[:history]==nil ? session[:history] = [] : session[:history]
+  end
+
   get '/' do
-    p session[:history]
-    @message = session[:history]
+    @messages = session[:history]
     erb :index
   end
 
   post '/new-message' do
-    @messages = []
-    @messages << session[:history]
-    @messages << [params[:Message]]
-    session[:history] = @messages
-    p session[:history]
+    session[:history] << [params[:message]]
     redirect '/'
   end
 

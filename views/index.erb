@@ -2,14 +2,31 @@
 
 <html>
 <center>
+<!-- <head> -->
+<!-- <style type=“text/css”>
+ body
+ {
+   padding : 0;
+   margin: 0;
+   background: #71BAF2;
+   font-size: 1.5em;
+   text-align: center;
+   font-family: ‘arial’;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+ }
+</style> -->
+<!-- </head> -->
 <body>
   <h1>MessageApp</h1>
   <form action='/new-message' method='post'>
-    <textarea name="Message" cols="40" rows="5"></textarea><br>
+    <textarea name="message" cols="40" rows="5"></textarea><br>
     <input type='submit' value='Send'>
     </form>
     <br>
-    <%=@message%>
+    <%=@messages%>
 </body>
 </center>
 </html>
