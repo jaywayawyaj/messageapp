@@ -1,5 +1,4 @@
 require 'sinatra/base'
-# require_relative './lib/message'
 
 class MessageApp < Sinatra::Base
   enable :sessions
