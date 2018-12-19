@@ -19,3 +19,7 @@ gem "timecop", "~> 0.9.1"
 gem "pry", "~> 0.12.2"
 
 gem "orderly", "~> 0.0.3"
+
+gem "data_mapper", "~> 1.0"
+
+gem "dm-postgres-adapter", "~> 1.0"

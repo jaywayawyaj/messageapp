@@ -6,16 +6,12 @@
     <title></title>
   </head>
   <body>
-<% @messages.each do |message| %>
-  <% if message.id == @id %>
-    <%= message.text %>
+    <%= @messages.text %>
     <br>
     <br>
-    <%= message.time %>
-  <% end %>
-  <br>
-<% end %>
-<br>
+    <%= @messages.time %>
+    <br>
+    <br>
 <div>
   <input type="button" value="Back to homepage" onclick="history.back(-1)" />
 </body>
