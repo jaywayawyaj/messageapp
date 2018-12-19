@@ -1,5 +1,5 @@
 feature "Visit a message page" do
-  scenario "it routes you to an individual message pagie" do
+  scenario "it routes you to an individual message page" do
     Timecop.freeze
     submit_two_messages
     click_link 'test1'
