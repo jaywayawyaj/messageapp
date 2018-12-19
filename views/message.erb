@@ -9,8 +9,13 @@
 <% @messages.each do |message| %>
   <% if message.id == @id %>
     <%= message.text %>
+    <br>
+    <br>
+    <%= message.time %>
   <% end %>
+  <br>
 <% end %>
+<br>
 <div>
   <input type="button" value="Back to homepage" onclick="history.back(-1)" />
 </body>
