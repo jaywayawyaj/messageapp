@@ -21,6 +21,9 @@ GEM
     mustermann (1.0.3)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
+    orderly (0.0.3)
+      capybara (>= 1.1)
+      rspec (>= 2.14)
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -64,6 +67,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara (~> 3.12)
+  orderly (~> 0.0.3)
   pry (~> 0.12.2)
   rspec (~> 3.8)
   simplecov (~> 0.16.1)
