@@ -25,7 +25,8 @@ describe Message do
 
   describe '#id' do
     it 'returns the message id' do
-      expect(message.id).to eq 13
+      allow(message).to receive(:id).and_return(2)
+      expect(message.id).to eq 2
     end
   end
 end

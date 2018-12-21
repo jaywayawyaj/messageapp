@@ -1,9 +1,9 @@
 
 ENV["RACK_ENV"] ||= 'development'
 
-require 'sinatra/base'
-require 'pry'
 require 'data_mapper'
+require 'pry'
+require 'sinatra/base'
 require_relative './lib/messages_db.rb'
 load './config/datamapper_setup.rb'
 

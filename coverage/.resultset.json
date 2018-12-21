@@ -1,6 +1,9 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/jayway/makers/projects/week-4/messageapp/spec/features/edit_message_spec.rb": [
+
+      ],
       "/Users/jayway/makers/projects/week-4/messageapp/spec/features/homepage_spec.rb": [
         1,
         1,
@@ -58,6 +61,19 @@
         1,
         1,
         null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/jayway/makers/projects/week-4/messageapp/spec/features/time_and_history_spec.rb": [
@@ -100,11 +116,12 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1545386829
+    "timestamp": 1545393799
   }
 }
