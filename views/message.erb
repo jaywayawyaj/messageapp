@@ -13,11 +13,15 @@
     <br>
     <br>
 <div>
-  <input type="button" value="Edit Message" onclick="/edit-message/:id" />
+  <form action="/edit-message/<%= @messages.id %>" method="get">
+    <input type="submit" value="Edit message" />
+</form>
     <br>
     <br>
 <div>
-<a href="/" class="button">Back to Homepage</a>
+  <form action="/">
+    <input type="submit" value="Back to Homepage" />
+</form>
 </body>
 </center>
 </html>

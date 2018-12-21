@@ -27,5 +27,10 @@ class MessageApp < Sinatra::Base
     erb :message
   end
 
+  get '/edit-message/:id' do |id|
+    @messages = Message.get!(id.to_i)
+    erb :edit
+  end
+
   run! if app_file == $0
 end
