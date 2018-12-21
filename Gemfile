@@ -4,15 +4,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
-# gem "rails"
-
-gem "capybara", "~> 3.12"
-
-gem "rspec", "~> 3.8"
-
 gem "sinatra", "~> 2.0"
-
-gem "simplecov", "~> 0.16.1"
 
 gem "timecop", "~> 0.9.1"
 
@@ -23,3 +15,11 @@ gem "orderly", "~> 0.0.3"
 gem "data_mapper", "~> 1.0"
 
 gem "dm-postgres-adapter", "~> 1.0"
+
+group :test do
+  gem 'capybara'
+  gem 'rspec'
+  gem 'rubocop', '0.56.0'
+  gem 'simplecov', require: false
+  gem 'simplecov-console', require: false
+end

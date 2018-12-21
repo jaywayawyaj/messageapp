@@ -14,7 +14,7 @@
     <% @messages.reverse.each do |message| %>
       <br>
       <div>
-      <a href = "/messages/<%=message.id%>"> <%= message.text.slice(0, 19) %> </a>
+      <a href = "/messages/<%=message.id%>"> <%= message.display %> </a>
       </div>
         <%= message.time %>
         <br>

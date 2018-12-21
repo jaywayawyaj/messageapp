@@ -13,7 +13,7 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
-ENV['TEST_ENV'] = 'test'
+ENV['RACK_ENV'] ||= 'test'
 
 require_relative '../app'
 
@@ -21,9 +21,18 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require 'timecop'
+require 'simplecov'
+require 'simplecov-console'
 require_relative './features/web_helpers'
 
 Capybara.app = MessageApp
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::Console,
+  # Want a nice code coverage website? Uncomment this next line!
+   SimpleCov::Formatter::HTMLFormatter
+])
+SimpleCov.start
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

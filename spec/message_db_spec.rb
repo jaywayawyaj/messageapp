@@ -1,4 +1,4 @@
-require 'message'
+require 'messages_db'
 
 describe Message do
   before do
@@ -9,23 +9,23 @@ describe Message do
     Timecop.return
   end
 
-  subject(:message) { described_class.new('Test Message', 1) }
+  subject(:message) { described_class.create(:text => 'Test message') }
 
   describe '#text' do
     it 'returns the message text' do
-      expect(subject.text).to eq 'Test Message'
+      expect(message.text).to eq 'Test message'
     end
   end
 
   describe '#time' do
     it 'returns the timestamp' do
-      expect(subject.time).to eq Time.now
+      expect(message.time).to eq Time.now.strftime("%H:%M:%S - %d/%m/%y")
     end
   end
 
   describe '#id' do
     it 'returns the message id' do
-      expect(subject.id).to eq 1
+      expect(message.id).to eq 13
     end
   end
 end
