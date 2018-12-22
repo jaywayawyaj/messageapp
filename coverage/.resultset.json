@@ -11,6 +11,18 @@
         null,
         null
       ],
+      "/Users/jayway/makers/projects/week-4/messageapp/spec/features/delete_message_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jayway/makers/projects/week-4/messageapp/spec/features/edit_message_spec.rb": [
         1,
         1,
@@ -151,6 +163,6 @@
         null
       ]
     },
-    "timestamp": 1545501512
+    "timestamp": 1545502394
   }
 }

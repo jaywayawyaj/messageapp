@@ -38,5 +38,11 @@ class MessageApp < Sinatra::Base
     redirect"/messages/#{id}"
   end
 
+  post "/delete-message/:id" do |id|
+    message = Message.get!(id.to_i)
+    message.destroy
+    redirect '/'
+  end
+
   run! if app_file == $0
 end
