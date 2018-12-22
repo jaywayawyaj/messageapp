@@ -10,12 +10,13 @@ feature 'edit' do
   end
 
   scenario 'changing a message updates it' do
-    message = Message.create(text: "An edit message!")
+    Message.create(:text => "An edit message!", :id => 4)
     visit '/'
     click_on "An edit message!"
     click_button "Edit message"
     fill_in('message', with: "change the message")
-    expect(page.current_path).to eq "/edit-message/#{message.id}"
+    click_on 'submit'
+    expect(page.current_path).to eq "/messages/4"
     expect(page).to have_content "change the message"
   end
 end

@@ -6,9 +6,9 @@
     <title></title>
   </head>
   <body>
-  <form action="/new-message" method="post">
+  <form action="/update-message/<%= @message.id %>" method="post">
     <textarea name="message" cols="40" rows="5" >
-      <%= @messages.text %>
+      <%= @message.text %>
     </textarea>
     <br>
     <input type="submit" value="submit">

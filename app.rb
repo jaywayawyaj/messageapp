@@ -11,7 +11,7 @@ class MessageApp < Sinatra::Base
   enable :sessions
 
   get '/' do
-    @messages = Message.all
+    @message = Message.all
     erb :index
   end
 
@@ -23,13 +23,19 @@ class MessageApp < Sinatra::Base
   end
 
   get '/messages/:id' do |id|
-    @messages = Message.get!(id.to_i)
-    erb :message
+    @message = Message.get!(id.to_i)
+    erb :display_message
   end
 
   get '/edit-message/:id' do |id|
-    @messages = Message.get!(id.to_i)
+    @message = Message.get!(id.to_i)
     erb :edit
+  end
+
+  post '/update-message/:id' do |id|
+    message = Message.get!(id.to_i)
+    message.update(:text => params[:message])
+    redirect"/messages/#{id}"
   end
 
   run! if app_file == $0

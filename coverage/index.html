@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-21T19:28:27+00:00">2018-12-21T19:28:27+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-22T18:58:32+01:00">2018-12-22T18:58:32+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>87</b> relevant lines. 
-    <span class="green"><b>87</b> lines covered</span> and
+    <b>88</b> relevant lines. 
+    <span class="green"><b>88</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,9 +63,9 @@
       <tr>
         <td class="strong"><a href="#42f6f514949703089b877bbae8bdc9cf2bc3f3bd" class="src_link" title="spec/features/edit_message_spec.rb">spec/features/edit_message_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>17</td>
-        <td>17</td>
+        <td>22</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -228,8 +228,8 @@
     <h3>spec/features/edit_message_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -312,7 +312,7 @@
         <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
-          <code class="ruby">    message = Message.create(text: &quot;An edit message!&quot;)</code>
+          <code class="ruby">    Message.create(:text =&gt; &quot;An edit message!&quot;, :id =&gt; 4)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="14">
@@ -342,22 +342,28 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page.current_path).to eq &quot;/edit-message/#{message.id}&quot;</code>
+          <code class="ruby">    click_on &#39;submit&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
+          <code class="ruby">    expect(page.current_path).to eq &quot;/messages/4&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
           <code class="ruby">    expect(page).to have_content &quot;change the message&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>

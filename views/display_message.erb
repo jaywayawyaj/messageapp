@@ -6,14 +6,14 @@
     <title></title>
   </head>
   <body>
-    <%= @messages.text %>
+    <%= @message.text %>
     <br>
     <br>
-    <%= @messages.time %>
+    <%= @message.time %>
     <br>
     <br>
 <div>
-  <form action="/edit-message/<%= @messages.id %>" method="get">
+  <form action="/edit-message/<%= @message.id %>" method="get">
     <input type="submit" value="Edit message" />
 </form>
     <br>
