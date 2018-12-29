@@ -16,6 +16,8 @@ gem "data_mapper", "~> 1.0"
 
 gem "dm-postgres-adapter", "~> 1.0"
 
+gem "rake", "~> 12.3"
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
