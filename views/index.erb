@@ -6,11 +6,7 @@
     <title></title>
   </head>
   <body>
-    <form action="/new-message" method="post">
-    <textarea name="message" cols="40" rows="5" required></textarea>
-    <br>
-      <input type="submit" value="submit">
-    </form>
+    <%= erb(:textarea, :locals => { :object => "new-message", :content => nil, :value => nil }) %>
     <% @message.reverse.each do |message| %>
       <br>
       <div>

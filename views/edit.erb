@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <center>
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
   <br>
-  <form action="/update-message/<%= @message.id %>" method="post">
-    <textarea name="message" cols="40" rows="5"><%= @message.text %></textarea>
-    <br>
-    <input type="submit" value="submit">
-  </form>
-</body>
-</center>
+  <%= erb(:textarea, :locals => { :object => "update-message/#{@message.id}", :content => @message.text, :value => nil }) %>
+  </body>
 </html>
