@@ -6,7 +6,8 @@
     <title></title>
   </head>
   <body>
-    <%= erb(:textarea, :locals => { :object => "new-message", :content => nil, :value => nil }) %>
+    <%= erb(:textarea, :locals => { :object => "new-message",
+    :content => nil, :value => nil }) %>
     <% @message.reverse.each do |message| %>
       <br>
       <div>

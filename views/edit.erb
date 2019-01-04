@@ -6,6 +6,7 @@
   </head>
   <body>
   <br>
-  <%= erb(:textarea, :locals => { :object => "update-message/#{@message.id}", :content => @message.text, :value => nil }) %>
+  <%= erb(:textarea, :locals => { :object => "update-message/#{@message.id}",
+  :content => @message.text, :value => nil }) %>
   </body>
 </html>
