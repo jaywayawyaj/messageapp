@@ -4,7 +4,7 @@ ENV["RACK_ENV"] ||= 'development'
 require 'data_mapper'
 require 'pry'
 require 'sinatra/base'
-require_relative './lib/messages_db.rb'
+require_relative './lib/message.rb'
 load './config/datamapper_setup.rb'
 
 class MessageApp < Sinatra::Base
