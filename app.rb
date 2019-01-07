@@ -5,6 +5,8 @@ require 'data_mapper'
 require 'pry'
 require 'sinatra/base'
 require_relative './lib/message.rb'
+require_relative './lib/tag.rb'
+require_relative './lib/tagging.rb'
 load './config/datamapper_setup.rb'
 
 class MessageApp < Sinatra::Base
@@ -16,14 +18,16 @@ class MessageApp < Sinatra::Base
   end
 
   post '/new-message' do
-    Message.create(
-      :text => params[:message],
-    )
+    message = Message.create(:text => params[:message])
+    tag = Tag.first_or_create(:text => params[:tag])
+    message.tags << tag
+    message.save
     redirect '/'
   end
 
   get '/messages/:id' do |id|
     @message = Message.get!(id.to_i)
+    binding.pry
     erb :display_message
   end
 
@@ -40,6 +44,7 @@ class MessageApp < Sinatra::Base
 
   post "/delete-message/:id" do |id|
     message = Message.get!(id.to_i)
+    message.taggings.destroy
     message.destroy
     redirect '/'
   end

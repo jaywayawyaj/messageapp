@@ -1,4 +1,4 @@
-require 'messages_db'
+require 'message'
 
 describe Message do
   before do

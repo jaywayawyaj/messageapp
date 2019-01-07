@@ -10,8 +10,10 @@
     <br>
     <br>
     <%= @message.time %>
+    <%= @message.tags %>
     <br>
     <br>
+  
 <div>
   <form action="/edit-message/<%= @message.id %>" method="get">
     <input type="submit" value="Edit message" />

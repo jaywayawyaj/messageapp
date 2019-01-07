@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <center>
   <head>
+    <link rel="stylesheet" type="text/css" href="<%= url("/style/master.css")%>">
     <meta charset="utf-8">
     <title></title>
   </head>
@@ -16,6 +17,8 @@
       <div>
       <a href = "/messages/<%= message.id %>"> <%= message.display %> </a>
       </div>
+        <%= message.tags[0].text %>
+        <br>
         <%= message.time %>
         <br>
     <% end %>

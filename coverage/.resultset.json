@@ -135,7 +135,7 @@
         null,
         null
       ],
-      "/Users/jayway/makers/projects/week-4/messageapp/spec/message_db_spec.rb": [
+      "/Users/jayway/makers/projects/week-4/messageapp/spec/message_spec.rb": [
         1,
         null,
         1,
@@ -170,6 +170,6 @@
         null
       ]
     },
-    "timestamp": 1546619817
+    "timestamp": 1546874834
   }
 }

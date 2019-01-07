@@ -5,6 +5,9 @@ class Message
   property :text,         String
   property :created_at,   DateTime
 
+  has n, :taggings
+  has n, :tags, :through => :taggings
+
   def display
     text[0..19]
   end
