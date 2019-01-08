@@ -124,6 +124,21 @@
         null,
         null
       ],
+      "/Users/jayway/makers/projects/week-4/messageapp/spec/features/tag_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/jayway/makers/projects/week-4/messageapp/spec/features/time_and_history_spec.rb": [
         1,
         1,
@@ -170,6 +185,6 @@
         null
       ]
     },
-    "timestamp": 1546874834
+    "timestamp": 1546937656
   }
 }

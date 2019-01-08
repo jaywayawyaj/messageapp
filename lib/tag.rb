@@ -7,7 +7,4 @@ class Tag
   has n, :taggings
   has n, :messages, :through => :taggings
 
-  def show
-    puts @text
-  end
 end

@@ -27,7 +27,6 @@ class MessageApp < Sinatra::Base
 
   get '/messages/:id' do |id|
     @message = Message.get!(id.to_i)
-    binding.pry
     erb :display_message
   end
 
