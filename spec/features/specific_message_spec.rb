@@ -12,7 +12,6 @@ feature Message do
   context 'Seeing a message' do
     scenario 'click on a message shows the full text of the message' do
       message = Message.create(text: "A fancy message!")
-
       visit '/'
       click_on 'A fancy message!'
       expect(page.current_path).to eq("/messages/#{message.id}")
